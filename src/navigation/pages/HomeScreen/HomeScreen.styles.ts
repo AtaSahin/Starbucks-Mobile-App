@@ -96,6 +96,9 @@ const styles = StyleSheet.create({
       campaignBody:{
         fontWeight:"600",
         color:"grey"
+      },
+      tabNavigationStyles:{
+        borderRadius:scale(30),
       }
       
 })
