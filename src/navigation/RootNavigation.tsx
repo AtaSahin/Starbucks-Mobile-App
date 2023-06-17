@@ -4,17 +4,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import HomeScreen from './pages/HomeScreen/HomeScreen';
 import createOrderPage from './pages/CreateOrder/createOrderPage';
-import styles from './pages/HomeScreen/HomeScreen.styles';
-import { StyleSheet } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './pages/LoginPage/LoginPage';
+import SplashPage from './pages/SplashPage/SplashPage';
 
-
-
+const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const RootNavigation = () => {
   return (
-    <NavigationContainer>
-   <Tab.Navigator
+
+   <Tab.Navigator initialRouteName='HomeScreen'
+   
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -24,7 +25,7 @@ const RootNavigation = () => {
             color = focused ? '#4AA366' : '#6F8094';
           }
 
-          if (route.name === 'CreateOrder') {
+          if (route.name === 'Create Order') {
             iconName = 'coffee';
             color = focused ? '#4AA366' : '#6F8094';
           }
@@ -36,12 +37,32 @@ const RootNavigation = () => {
         showLabel: false, // Hide the screen names in the tab bar
       }}
     >
-      <Tab.Screen name="CreateOrder" component={createOrderPage} />
+      <Tab.Screen name="Create Order"
+       component={createOrderPage} 
+      
+      />
       <Tab.Screen name="Starbucks" component={HomeScreen} />
+
+
     </Tab.Navigator>
-    </NavigationContainer>
+
 
   );
 };
 
-export default RootNavigation;
+const StackNavigations = () => {
+  
+  return (
+    <NavigationContainer >
+      <Stack.Navigator initialRouteName="SplashPage" 
+     screenOptions={{headerShown:false}}>
+      <Stack.Screen name="RootNavigation" component={RootNavigation} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="Starbucks" component={HomeScreen} />
+        <Stack.Screen name="createOrderPage" component={createOrderPage} />
+        <Stack.Screen name="SplashPage" component={SplashPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+export default StackNavigations;
