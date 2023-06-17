@@ -1,0 +1,25 @@
+import React,{useEffect} from 'react';
+import {View} from 'react-native';
+import SplashScreenImage from '../../assets/svgImages/SplashScreenImage';
+import { useNavigation } from '@react-navigation/native';
+
+
+function SplashPage() {
+
+    const navigation =useNavigation();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        navigation.navigate("LoginScreen");// Otomatik olarak Login sayfasına geçiş yapar
+    }, 2000); // 3 saniye bekler
+
+    return () => clearTimeout(timer); // Timer'ı temizler
+  }, [navigation]);
+
+    return (
+<View>
+<SplashScreenImage></SplashScreenImage>
+</View>
+    );
+}
+
+export default SplashPage;
