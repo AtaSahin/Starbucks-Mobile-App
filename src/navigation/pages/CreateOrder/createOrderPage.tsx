@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Text } from 'react-native-svg';
 
-function createOrderPage(props) {
+function CreateOrderPage(props) {
     return (
     <View style={{backgroundColor:"black"}}>
         <Text>
@@ -13,4 +13,4 @@ function createOrderPage(props) {
     );
 }
 
-export default createOrderPage;
+export default CreateOrderPage;
