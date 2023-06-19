@@ -10,7 +10,7 @@ function SplashPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
         navigation.navigate("LoginScreen");// Otomatik olarak Login sayfasına geçiş yapar
-    }, 2000); // 3 saniye bekler
+    }, 2000); // 2 saniye bekler
 
     return () => clearTimeout(timer); // Timer'ı temizler
   }, [navigation]);

@@ -37,11 +37,11 @@ const RootNavigation = () => {
         showLabel: false, // Hide the screen names in the tab bar
       }}
     >
+      <Tab.Screen name="Starbucks" 
+      component={HomeScreen} />
       <Tab.Screen name="Create Order"
-       component={createOrderPage} 
+       component={createOrderPage} />
       
-      />
-      <Tab.Screen name="Starbucks" component={HomeScreen} />
 
 
     </Tab.Navigator>

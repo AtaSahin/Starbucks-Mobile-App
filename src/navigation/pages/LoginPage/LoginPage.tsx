@@ -9,10 +9,10 @@ const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-   
+  const handleLoginPress = () => {
     console.log('Email:', email);
     console.log('Password:', password);
+    navigation.navigate('RootNavigation');
   };
 
   return (
@@ -33,9 +33,10 @@ const LoginScreen = () => {
         value={password}
         secureTextEntry
       />
+
 <Button 
   title='Login' 
-  onPress={()=> navigation.navigate("RootNavigation")}
+  onPress={handleLoginPress}
 />
     </View>
   );
