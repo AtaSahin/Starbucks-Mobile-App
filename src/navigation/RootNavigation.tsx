@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import HomeScreen from './pages/HomeScreen/HomeScreen';
-import createOrderPage from './pages/CreateOrder/createOrderPage';
+import CreateOrderPage from './pages/CreateOrder/CreateOrderPage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './pages/LoginPage/LoginPage';
+import LoginScreen from './pages/auth/LoginPage/LoginPage';
 import SplashPage from './pages/SplashPage/SplashPage';
 
 const Stack = createNativeStackNavigator();
@@ -40,7 +40,7 @@ const RootNavigation = () => {
       <Tab.Screen name="Starbucks" 
       component={HomeScreen} />
       <Tab.Screen name="Create Order"
-       component={createOrderPage} />
+       component={CreateOrderPage} />
       
 
 
@@ -59,7 +59,7 @@ const StackNavigations = () => {
       <Stack.Screen name="RootNavigation" component={RootNavigation} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="Starbucks" component={HomeScreen} />
-        <Stack.Screen name="createOrderPage" component={createOrderPage} />
+        <Stack.Screen name="CreateOrderPage" component={CreateOrderPage} />
         <Stack.Screen name="SplashPage" component={SplashPage} />
       </Stack.Navigator>
     </NavigationContainer>
