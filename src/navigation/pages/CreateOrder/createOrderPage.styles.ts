@@ -49,7 +49,38 @@ const styles = StyleSheet.create({
     width: width * 1,
    },
    scrollViewStyle:{
+    top:height * 0.05,
+    
+   },
+   besetSellersButton:{
+    width: width * 0.3,
+    height: height * 0.05,
+    borderColor:"#DFE4EC",
+    borderWidth:scale(1.5),
+    left: width * 0.05,
+    borderRadius:scale(5),
+    top: height * 0.018,
+    
+   },
+   bestSellersText:{
+    fontSize:scale(18),
+    fontWeight:"600",
+    color:"#2E2D38",
 
+   },
+   foodText:{
+    fontSize:scale(18),
+    fontWeight:"600",
+    color:"#2E2D38",
+   },
+   foodsButton:{
+    width: width * 0.2,
+    height: height * 0.05,
+    borderColor:"#DFE4EC",
+    borderWidth:scale(1.5),
+    left: width * 0.05,
+    borderRadius:scale(5),
+    top: height * 0.018,
    }
     
 })

@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
    },
    coffeContainer:{
     width: width * 1,
+
    },
    coffeItemTextContainer:{
     left: width * 0.25,
