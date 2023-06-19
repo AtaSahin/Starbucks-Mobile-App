@@ -1,15 +1,26 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Text } from 'react-native-svg';
+import { View,ScrollView,Text,Pressable, TouchableOpacity } from 'react-native';
+import styles from './CreateOrderPage.styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import HazelnutImage from '../../assets/svgImages/CoffeImages/HazelnutCoffe';
+import BestSellerCoffes from '../../../components/bestSellerCoffeItems/BestSellerCoffes';
 
-function CreateOrderPage(props) {
+
+
+function CreateOrderPage() {
     return (
-    <View style={{backgroundColor:"black"}}>
-        <Text>
- 
-
-        </Text>
-    </View>
+        <SafeAreaView>
+        <View style={styles.container}>
+          <View style={styles.menuContainer}>
+            <ScrollView style={styles.scrollViewStyle}>
+              <BestSellerCoffes />
+              <BestSellerCoffes />
+              <BestSellerCoffes />
+              <BestSellerCoffes />
+            </ScrollView>
+          </View>
+        </View>
+      </SafeAreaView>
     );
 }
 

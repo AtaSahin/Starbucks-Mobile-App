@@ -2,6 +2,8 @@ import React,{useEffect} from 'react';
 import {View} from 'react-native';
 import SplashScreenImage from '../../assets/svgImages/SplashScreenImage';
 import { useNavigation } from '@react-navigation/native';
+import styles from './SplashPage.styles';
+
 
 
 function SplashPage() {
@@ -16,7 +18,7 @@ function SplashPage() {
   }, [navigation]);
 
     return (
-<View>
+<View style={styles.container}>
 <SplashScreenImage></SplashScreenImage>
 </View>
     );
