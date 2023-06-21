@@ -11,9 +11,10 @@ const styles = StyleSheet.create({
         width: width * 0.18,
         height: height * 0.05,
         borderRadius:scale(5),
+        right: width * 0.01
     },
     addButtonContainer:{
-        width: width * 0.2,
+        width: width * 0.18,
         alignSelf:"flex-end",
         bottom: height * 0.07,
    },
@@ -23,6 +24,15 @@ const styles = StyleSheet.create({
     left: width * 0.05,
     top: height * 0.01,
    },
+
+   clickedAddButton:{
+    backgroundColor:"#4AA366",
+    width: width * 0.09,
+    height: height * 0.05,
+    borderRadius:scale(5),
+    left: width * 0.04
+   },
+
    coffeContainer:{
     width: width * 1,
 
