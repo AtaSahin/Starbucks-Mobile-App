@@ -18,7 +18,7 @@ const LoginScreen = () => {
   };
   const [value, setValue] = useState("");
   const [formattedValue, setFormattedValue] = useState("");
-  const phoneInput = useRef<PhoneInput>(null);34234
+  const phoneInput = useRef<PhoneInput>(null);
   return (
     <View style={styles.container}>
 <LoginBG></LoginBG>
