@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View,ScrollView,Text, TouchableOpacity } from 'react-native';
-import styles from './CreateOrderPage.styles';
+import styles from './createOrderPage.styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import BestSellerCoffes from '../../../components/bestSellerCoffeItems/BestSellerCoffes';
 import CoffeItems from '../../../components/Mocha/MochaCoffe';

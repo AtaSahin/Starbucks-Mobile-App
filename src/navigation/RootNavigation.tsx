@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import HomeScreen from './pages/HomeScreen/HomeScreen';
-import CreateOrderPage from './pages/CreateOrder/CreateOrderPage';
+import CreateOrderPage from './pages/CreateOrder/createOrderPage';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './pages/auth/LoginPage/LoginPage';
 import SplashPage from './pages/SplashPage/SplashPage';
