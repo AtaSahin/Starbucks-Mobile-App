@@ -14,7 +14,7 @@ function TimeLocationPicker() {
   const [bgColor, setBgColor] = useState("white");
   const [activeButton, setActiveButton] = useState("BestSellerCoffes");
   const [date, setDate] = useState(new Date());
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
   const [openModal, setOpenModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState("Los Angles");
 
