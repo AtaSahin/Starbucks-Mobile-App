@@ -6304,7 +6304,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@*, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@*, prop-types@^15.5.10, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6440,10 +6440,24 @@ react-native-country-picker-modal@^2.0.0:
     prop-types "15.7.2"
     react-async-hook "3.6.1"
 
+react-native-date-picker@^4.2.13:
+  version "4.2.13"
+  resolved "https://registry.yarnpkg.com/react-native-date-picker/-/react-native-date-picker-4.2.13.tgz#b5b894ee6c5a154a752f9094342170515e169ea6"
+  integrity sha512-cQ3k+ExXggAnytomeNGNrtV/l2a7WzVUeWKo7Gs2pv/z3TCjjlmKn0ZBMPgcThrFAgFMxgYI0XzKVKT7TPsOmw==
+  dependencies:
+    prop-types "^15.8.1"
+
 react-native-gradle-plugin@^0.71.19:
   version "0.71.19"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
+
+react-native-modal-selector@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-modal-selector/-/react-native-modal-selector-2.1.2.tgz#c9fae030baf8bb2c5419e766ff63c31fc946f396"
+  integrity sha512-+Cvoz/yNUFmfIkJ7xkmlLR2nhJOUhx00S6BPqp2Ruy8LkmaiNr7WMZ4BzsgzylyEgZ84Q+42HQ0v0QzJYobviA==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native-phone-number-input@^2.1.0:
   version "2.1.0"
