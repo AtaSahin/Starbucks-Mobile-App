@@ -13,18 +13,20 @@ const styles = StyleSheet.create({
     top: height * 0.05,
   },
 
-  pickerContainersHeader: {
-    left: width * 0.05,
-    fontWeight: "600",
-    color: "#2E2D38",
-    fontSize: scale(15),
+  menuHeader:{
+alignSelf:"flex-start",
+left: width * 0.06,
+top: height * 0.02,
+fontSize:scale(15),
+fontWeight:"700",
+color:'#2E2D38'
   },
 
   menuContainer: {
     width: width * 1,
     height: height * 0.6,
     backgroundColor: "white",
-    top: height * 0.1,
+    top: height * 0.05,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -52,16 +54,18 @@ const styles = StyleSheet.create({
     top: height * 0.018,
   },
   bestSellersText: {
-    fontSize: scale(18),
+    fontSize: scale(15),
     fontWeight: "600",
     color: "#2E2D38",
-    left: scale(3),
+    top: height * 0.005,
+    alignSelf:"center",
   },
   foodText: {
-    fontSize: scale(18),
+    fontSize: scale(15),
     fontWeight: "600",
     color: "#2E2D38",
-    left: scale(5),
+    top: height * 0.005,
+    alignSelf:"center",
   },
   foodsButton: {
     width: width * 0.2,

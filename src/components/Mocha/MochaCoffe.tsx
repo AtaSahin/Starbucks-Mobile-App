@@ -16,9 +16,9 @@ function CoffeItems() {
             <Text style={styles.coffeItemText}>Mocha</Text>
             <Text style={styles.coffePriceText}>$5</Text>
             </View>
-           
+            <View style={{left:5}}>
             <WhiteMocha/>
-        
+            </View>
             <View>
             <TouchableOpacity>
         

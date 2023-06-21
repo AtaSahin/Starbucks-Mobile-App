@@ -18,6 +18,7 @@ function CreateOrderPage() {
         <TimeLocationPicker />
 
         <View style={styles.menuContainer}>
+          <Text style={styles.menuHeader}>Menu</Text>
           <ScrollView style={styles.scrollViewStyle}>
             <View style={{ flexDirection: 'row' }}>
               <TouchableOpacity onPress={() => handleButtonPress("BestSellerCoffes")}>

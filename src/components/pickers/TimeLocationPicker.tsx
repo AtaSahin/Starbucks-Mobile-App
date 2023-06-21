@@ -21,9 +21,10 @@ function TimeLocationPicker() {
   return (
     <View style={styles.pickerContainers}>
       <Text style={styles.pickerContainersHeader}>Take Away Option</Text>
-      <TouchableOpacity onPress={() => setOpen(true)}>
+      
         <View style={styles.timePickerConainer}>
-          <Text style={styles.packageReciveText}>Time to receive order </Text>
+        <TouchableOpacity onPress={() => setOpen(true)}>
+          <Text style={styles.packageReciveText}>Pick a time to receive order </Text>
           <DatePicker
             modal
             open={open}
@@ -38,15 +39,18 @@ function TimeLocationPicker() {
             }}
           />
           <Text style={styles.pickedDate}>{date.toLocaleTimeString()}</Text>
+          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => setOpenModal(true)}>
+
+     
         <View style={styles.locationPickerConainer}>
+        <TouchableOpacity onPress={() => setOpenModal(true)}>
           <Text style={styles.selectedCityText}>{selectedCity}</Text>
           <Text style={styles.locationText}>Location:</Text>
+          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+
 
       <Modal visible={openModal} transparent={true} animationType="slide">
         <View style={styles.modalContainer}>

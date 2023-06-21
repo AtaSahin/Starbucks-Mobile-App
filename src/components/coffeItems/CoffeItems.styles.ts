@@ -42,6 +42,28 @@ const styles = StyleSheet.create({
     fontSize:scale(15),
     fontWeight:"500",
     color:"#2E2D38",
+   },
+   quantityContainer:{
+    width: width * 0.25,
+    height: height * 0.05,
+    backgroundColor:"#DFE4EC",
+    borderRadius:scale(5),
+    bottom: height * 0.05,
+    right: width * 0.3
+
+
+   },
+   quantityText:{
+    alignSelf:"center",
+    top:height * 0.01,
+    fontSize:scale(13),
+    fontWeight:"bold"
+   },
+   plusMinus:{
+    flexDirection:"row",
+    bottom: height * 0.022,
+    left: width * 0.01,
+ 
    }
     
 })
