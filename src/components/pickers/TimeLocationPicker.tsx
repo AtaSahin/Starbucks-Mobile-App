@@ -10,7 +10,7 @@ import {
 import styles from "./TimeLocationPicker.style";
 import DatePicker from "react-native-date-picker";
 
-function TimeLocationPicker(props) {
+function TimeLocationPicker() {
   const [bgColor, setBgColor] = useState("white");
   const [activeButton, setActiveButton] = useState("BestSellerCoffes");
   const [date, setDate] = useState(new Date());
