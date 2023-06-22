@@ -147,8 +147,57 @@ const styles = StyleSheet.create({
     color:"black",
     fontSize:scale(20),
     fontWeight:"600",
-   }
+   },
+   checkoutModalContainer:{
+    flex: 1,
+    justifyContent: 'flex-end',
+   },
+   checkoutModalContent:{
+    top:height * 0.1,
+    height: height * 1,
+    backgroundColor: '#FFF',
+     width: width * 1,
+    alignSelf:"center",
+   },
+   
+   checkoutPageInfo:{
+   height: height * 0.2,
+   backgroundColor: '#FFF',
+   
+    width: width * 1,
+   alignSelf:"center",
+},
+payButton:{
+    backgroundColor:"#4AA366",
+    top:height * 0.01,
+    height: height * 0.07,
+    width: width * 0.7,
+    borderRadius:scale(5),
+    alignSelf:"center",
+},
+paymentDoneContainer:{
+    flex: 1,
+    justifyContent: 'flex-end',
 
+
+},
+
+paymentDoneContent:{
+    top:height * 0.1,
+    height: height * 1,
+    backgroundColor: '#FFF',
+     width: width * 1,
+    alignSelf:"center",
+
+},
+homeButton:{
+    backgroundColor:"#4AA366",
+    bottom:height * 0.03,
+    height: height * 0.07,
+    width: width * 0.7,
+    borderRadius:scale(5),
+    alignSelf:"center",
+}
     
 })
 
