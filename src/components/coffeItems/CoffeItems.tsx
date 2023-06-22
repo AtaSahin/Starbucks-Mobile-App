@@ -10,16 +10,19 @@ import HazelnutImage from "../../navigation/assets/svgImages/CoffeImages/Hazelnu
 import styles from "./CoffeItems.styles";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { useNavigation } from "@react-navigation/native";
+import HazelnutImageBanner from "../../navigation/assets/svgImages/CoffeImages/HazelnutCoffeBanner";
+import PaymentSuccess from "../../navigation/assets/svgImages/paymentSuccessful";
 
 function CoffeItems() {
   const navigation = useNavigation();
   const [quantity, setQuantity] = useState(0);
   const [showQuantity, setShowQuantity] = useState(false);
   const [summaryModal, SetSummaryModal] = useState(false);
-  const[coffeChoose, SetCoffeChoose]= useState("")
+  const [coffeChoose, SetCoffeChoose] = useState("");
   const [price, setPrice] = useState(5 * quantity);
-
-
+  const [activeCheckout, SetActiveCheckout] = useState(false);
+  const [activatePay, SetActivatePay] = useState(false);
+  const [activateHome, SetaActivateHome] = useState(false);
 
   const processOrder = () => {
     SetSummaryModal(true);
@@ -27,6 +30,10 @@ function CoffeItems() {
 
   const closeModal = () => {
     SetSummaryModal(false);
+  };
+
+  const closeCheckOutModal = () => {
+    SetActiveCheckout(false);
   };
 
   return (
@@ -47,10 +54,10 @@ function CoffeItems() {
               setShowQuantity(true);
               if (quantity == 0) {
                 setQuantity(quantity + 1);
-              } else if (quantity == 1 || quantity >1) {
-                setPrice(5 * quantity)
+              } else if (quantity == 1 || quantity > 1) {
+                setPrice(5 * quantity);
                 processOrder();
-                SetCoffeChoose("Hazelnut Coffe")
+                SetCoffeChoose("Hazelnut Coffe");
               }
             }}
             style={showQuantity ? styles.clickedAddButton : styles.addButton}
@@ -69,7 +76,6 @@ function CoffeItems() {
 
           {showQuantity && (
             <View style={styles.quantityContainer}>
-              
               <Text style={styles.quantityText}>{quantity}</Text>
               <View style={styles.plusMinus}>
                 <Text
@@ -114,23 +120,86 @@ function CoffeItems() {
               X
             </Text>
             <CoffeItems></CoffeItems>
-            <Text style={styles.orderQuantity}>Quantity:  {quantity}</Text>
+            <Text style={styles.orderQuantity}>Quantity: {quantity}</Text>
             <View style={styles.priceContainer}>
-            <Text style={styles.priceText}>Total:</Text> 
-            <Text style={styles.totalPriceText}>${price}</Text>
+              <Text style={styles.priceText}>Total:</Text>
+              <Text style={styles.totalPriceText}>${price}</Text>
             </View>
-         
-           
-         
-       
-        <View style={styles.checkOutButtonContainer}>
-          <TouchableOpacity>
-          <View style={styles.checkOutButton}>
-<Text style={styles.checkoutText}>Go To Checkout</Text>
+
+            <View style={styles.checkOutButtonContainer}>
+              <TouchableOpacity onPress={() => SetActiveCheckout(true)}>
+                <View style={styles.checkOutButton}>
+                  <Text style={styles.checkoutText}>Go To Checkout</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
-          </TouchableOpacity>
         </View>
+      </Modal>
+
+      <Modal transparent={true} visible={activeCheckout} animationType="fade">
+        <View style={styles.checkoutModalContainer}>
+          <View style={styles.checkoutModalContent}>
+            <View
+              style={{ alignSelf: "center", top: 150, alignItems: "center" }}
+            >
+              <HazelnutImageBanner></HazelnutImageBanner>
+              <View style={{ alignSelf: "flex-start", top: 50 }}>
+                <Text style={{ fontSize: 20, color: "black" }}>
+                  Toffee Nut Frappuccino
+                </Text>
+                <View style={{ margin: 20 }}></View>
+                <Text>
+                  Toffee nut syrup is blended with ice and milk, then topped
+                  with whipped cream and a delicious toffee nut flavoured
+                  topping.
+                </Text>
+              </View>
+            </View>
           </View>
+          <View style={styles.checkoutPageInfo}>
+            <Text style={styles.orderQuantity}>Quantity: {quantity}</Text>
+            <View style={styles.priceContainer}>
+              <Text style={styles.priceText}>Total:</Text>
+              <Text style={styles.totalPriceText}>${price}</Text>
+            </View>
+            <View style={{ alignSelf: "center", top: 2 }}>
+              <TouchableOpacity onPress={() => SetActivatePay(true)}>
+                <View style={styles.payButton}>
+                  <Text style={styles.checkoutText}>Pay</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal transparent={true} visible={activatePay} animationType="fade">
+        <View style={styles.paymentDoneContainer}>
+          <View style={styles.paymentDoneContent}>
+            <View style={{alignSelf:"center",top:100}}>
+              <PaymentSuccess></PaymentSuccess>
+             
+            </View>
+            <View style={{alignSelf:"center",top:120}}>
+              <Text style={{fontSize:18,fontWeight:"800",color:"black"}}>Thanks for ordering from Us!</Text>
+              </View>
+          </View>
+
+
+          <View style={{alignSelf:"flex-start",bottom:200,left:20}}>
+
+ 
+          </View>
+<View  style={{ alignSelf: "center", top: 2 }}>
+
+
+  <TouchableOpacity onPress={() => navigation.navigate("Starbucks")}>
+                <View style={styles.homeButton}>
+                  <Text style={styles.checkoutText}>Go to Home Page</Text>
+                </View>
+              </TouchableOpacity>
+              </View>
         </View>
       </Modal>
     </View>
