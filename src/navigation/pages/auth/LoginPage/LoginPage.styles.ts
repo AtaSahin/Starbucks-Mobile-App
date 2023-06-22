@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   loginButton: {
-    backgroundColor: "#4AA366",
+    backgroundColor: "#B5F0C8",
     paddingVertical: 10,
     paddingHorizontal: 20,
     width: width * 0.8,
@@ -51,6 +51,15 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     right: scale(15),
   },
+  activatedButton:{
+    backgroundColor: "#4AA366",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    width: width * 0.8,
+    top: height * 0.05,
+    borderRadius: scale(10),
+    height: height * 0.09,
+  }
 });
 
 export default styles;

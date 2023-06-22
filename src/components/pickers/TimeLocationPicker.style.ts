@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
 pickerContainers:{
     backgroundColor:"white",
     width: width * 1,
-    height:height *0.3,
+    height:height * 0.3,
     alignSelf:"center",
-    top: height * 0.05
+    top: height * 0.025
     },
 
     pickerContainersHeader:{
@@ -54,11 +54,17 @@ pickerContainers:{
    },
    packageReciveText:{
     left: width * 0.01,
+
+
+
+    fontWeight:"800",
+    fontSize:scale(13)
    },
    pickedDate:{
-    left: width * 0.01,
-    top: height * 0.01,
-    fontWeight:"600"
+  
+    top: height * 0.008,
+    fontWeight:"600",
+    alignSelf:"center"
    },
 
    locationPickerConainer:{
