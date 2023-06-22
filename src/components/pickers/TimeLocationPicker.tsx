@@ -17,7 +17,10 @@ function TimeLocationPicker() {
   const [open, setOpen] = useState(false); 
   const [openModal, setOpenModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState("Los Angles");
-
+  const closeModal= ()=>{
+    setOpenModal(false)
+    }
+    
   return (
     <View style={styles.pickerContainers}>
       <Text style={styles.pickerContainersHeader}>Take Away Option</Text>
@@ -26,6 +29,7 @@ function TimeLocationPicker() {
         <TouchableOpacity onPress={() => setOpen(true)}>
           <Text style={styles.packageReciveText}>Pick a time to receive order </Text>
           <DatePicker
+          
             modal
             open={open}
             date={date}
@@ -52,7 +56,7 @@ function TimeLocationPicker() {
         </View>
 
 
-      <Modal visible={openModal} transparent={true} animationType="slide">
+      <Modal visible={openModal} transparent={true} animationType="slide" onRequestClose={closeModal}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text
