@@ -1,6 +1,7 @@
-# Starbucks-App
-Starbucks mobile app written by React Native with  5+ Screen and full functionality
+# Starbucks App Clone React Native
 <p align="center">
+
+Starbucks mobile app clone written by JS React Native with  5+ Screen and full functionality
 
 <div align="center">
   
