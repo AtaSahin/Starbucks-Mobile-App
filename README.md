@@ -1,10 +1,47 @@
-# Starbucks App Clone React Native
-<p align="center">
 
+<p align="center">
+# Starbucks App Clone React Native
 Starbucks mobile app clone written by JS React Native with  5+ Screen and full functionality
 
 <div align="center">
-  
+  <head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+  <h1>Proje Geliştirici Dökümantasyonu</h1>
+
+  <h2>Yarn Kurulumu</h2>
+  <p>
+    Yarn paket yöneticisini kullanmak için aşağıdaki adımları takip edin:
+    terminaliniz açıp yarn install komutunu çalıştırın
+    <!-- İlgili talimatları buraya ekleyin -->
+  </p>
+
+  <h2>Yeni Bir React Native Projesi Oluşturma</h2>
+  <p>
+    React Native projesi oluşturmak için aşağıdaki adımları izleyin:
+    terminalinizi açıp npx react-native ProjeIsmi komutunu girip çalıştırın
+    <!-- İlgili talimatları buraya ekleyin -->
+  </p>
+
+
+  <h2>Projenin Çalıştırılması</h2>
+  <p>
+    Projenizi çalıştırmak için aşağıdaki adımları takip edin:
+    cd ProjeIsmi komutu ile proje directory'nize gidin. ardından code . komutu ile editörünüze bağlanın.
+    ardından yarn run android komutu ile projeyi çalıştırabilirsiniz
+    <!-- İlgili talimatları buraya ekleyin -->
+  </p>
+ <h2>Proje Sürümleri</h2>
+  <p>
+      "react": "18.2.0",
+    "react-native": "0.71.11",
+    paketleri kullanılarak proje hazırlanmıştır.
+    <!-- İlgili talimatları buraya ekleyin -->
+  </p>
+
+</body>
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/80812122/246628619-64870ac6-a58d-4a54-99e7-b7338814a335.png" width="428" height="929" alt="Resim 1">
 
 <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://github-production-user-asset-6210df.s3.amazonaws.com/80812122/247989343-8d080309-5beb-45d5-afc0-e125d0e9e5db.png" width="428" height="929">
